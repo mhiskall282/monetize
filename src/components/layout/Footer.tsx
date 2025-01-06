@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-black text-white mt-auto">
+      <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
@@ -63,7 +63,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/blackstechafrica"
+                href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gold"
@@ -71,7 +71,7 @@ export default function Footer() {
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="https://twitter.com/blackstechafrica"
+                href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gold"
@@ -79,7 +79,7 @@ export default function Footer() {
                 <Twitter className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com/company/blackstechafrica"
+                href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gold"
@@ -94,17 +94,6 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">
               &copy; {new Date().getFullYear()} Monetize. All rights reserved.
-            </p>
-            <p className="text-gray-400 mt-2 md:mt-0">
-              Developed by{' '}
-              <a
-                href="https://blackstechafrica.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gold hover:text-yellow-500"
-              >
-                Blacks Tech Africa
-              </a>
             </p>
           </div>
         </div>

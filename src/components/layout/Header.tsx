@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Upload, User, Search } from 'lucide-react';
+import { Brain, Menu } from 'lucide-react';
 import ConnectWallet from '../blockchain/ConnectWallet';
+import MobileNav from './MobileNav';
 
 export default function Header() {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
   return (
     <header className="bg-black py-4 px-6 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -31,21 +34,20 @@ export default function Header() {
           >
             Pricing
           </Link>
-          <Link
-            to="/upload"
-            className="flex items-center text-white hover:text-gold transition-colors"
-          >
-            <Upload className="w-4 h-4 mr-1" />
-            Upload
-          </Link>
-          <Link
-            to="/profile"
-            className="text-white hover:text-gold transition-colors"
-          >
-            <User className="w-5 h-5" />
-          </Link>
           <ConnectWallet />
         </nav>
+
+        <button
+          className="md:hidden text-white hover:text-gold"
+          onClick={() => setIsMobileNavOpen(true)}
+        >
+          <Menu className="w-6 h-6" />
+        </button>
+
+        <MobileNav
+          isOpen={isMobileNavOpen}
+          onClose={() => setIsMobileNavOpen(false)}
+        />
       </div>
     </header>
   );

@@ -8,13 +8,15 @@ import Features from './pages/Features';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
+import Admin from './pages/Admin';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
+      <div className="min-h-screen flex flex-col">
         <Header />
-        <main>
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/marketplace" element={<Marketplace />} />
@@ -22,6 +24,8 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </main>
         <Footer />
