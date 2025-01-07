@@ -10,6 +10,15 @@ import Contact from './pages/Contact';
 import Team from './pages/Team';
 import Admin from './pages/Admin';
 import Dashboard from './pages/Dashboard';
+import SignIn from './pages/auth/SignIn';
+import SignUp from './pages/auth/SignUp';
+import About from './pages/About';
+import Blog from './pages/Blog';
+import Upload from './pages/Upload';
+import News from './pages/News';
+import Donate from './pages/Donate';
+import Documentation from './pages/Documentation';
+import Community from './pages/Community';
 
 function App() {
   return (
@@ -26,6 +35,15 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/upload" element={<Upload />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/docs" element={<Documentation />} />
+            <Route path="/community" element={<Community />} />
           </Routes>
         </main>
         <Footer />
@@ -33,4 +51,5 @@ function App() {
     </Router>
   );
 }
+
 export default App;
