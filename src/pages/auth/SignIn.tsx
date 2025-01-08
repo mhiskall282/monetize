@@ -11,13 +11,21 @@ export default function SignIn() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
+
+    // Admin login check
     if (credentials.email === 'admin' && credentials.password === 'admin') {
       localStorage.setItem('isAdmin', 'true');
       navigate('/admin');
-    } else {
-      // Simulate user login
+      return;
+    }
+
+    // Regular user login simulation
+    if (credentials.email && credentials.password) {
       localStorage.setItem('user', JSON.stringify({ email: credentials.email }));
       navigate('/dashboard');
+    } else {
+      setError('Please enter valid credentials');
     }
   };
 
@@ -28,7 +36,7 @@ export default function SignIn() {
           <h2 className="text-2xl font-bold mb-6 text-center">Sign In</h2>
           <form onSubmit={handleSubmit}>
             <Input
-              label="Email"
+              label="Email or Username"
               type="text"
               value={credentials.email}
               onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}

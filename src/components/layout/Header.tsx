@@ -36,10 +36,18 @@ export default function Header() {
             </>
           ) : (
             <>
-              <Button variant="secondary" icon={<LogIn className="w-4 h-4" />} onClick={() => navigate('/signin')}>
+              <Button 
+                variant="secondary" 
+                icon={<LogIn className="w-4 h-4" />}
+                onClick={() => navigate('/signin')}
+              >
                 Sign In
               </Button>
-              <Button variant="primary" icon={<UserPlus className="w-4 h-4" />} onClick={() => navigate('/signup')}>
+              <Button 
+                variant="primary" 
+                icon={<UserPlus className="w-4 h-4" />}
+                onClick={() => navigate('/signup')}
+              >
                 Sign Up
               </Button>
             </>
